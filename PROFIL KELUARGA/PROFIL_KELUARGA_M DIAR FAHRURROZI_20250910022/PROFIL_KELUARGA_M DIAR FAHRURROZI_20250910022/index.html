@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Keluarga Yusupi</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-body: #edf2f7;
+            --card-bg: #ffffff;
+            --primary-navy: #0f172a;
+            --header-table-gradient: linear-gradient(135deg, #1e293b, #334155);
+            --text-main: #334155;
+            --border-color: #cbd5e1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* Hero Header */
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #ffffff, #e0f2fe);
+            padding: 40px 25px;
+            border-radius: 24px;
+            border: 1px solid #bae6fd;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.08);
+        }
+
+        .badge-pill {
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: #ffffff;
+            background: linear-gradient(90deg, #2563eb, #0284c7);
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .main-title {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #0284c7;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .description {
+            max-width: 720px;
+            margin: 0 auto 30px auto;
+            color: #475569;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Card Foto */
+        .foto-section {
+            margin-bottom: 35px;
+        }
+
+        .foto-card {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 2px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .foto-card img {
+            width: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            border-radius: 16px;
+            display: block;
+        }
+
+        /* Card Section Konten */
+        .section-box {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 24px;
+            border: 1px solid #e2e8f0;
+            border-top: 5px solid #2563eb;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+
+        .section-title {
+            font-size: 1.45rem;
+            color: #1e293b;
+            margin-bottom: 22px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 6px;
+            height: 24px;
+            background: linear-gradient(180deg, #2563eb, #0284c7);
+            border-radius: 4px;
+        }
+
+        /* Tabel */
+        .table-responsive {
+            overflow-x: auto;
+            border-radius: 14px;
+            border: 2px solid #cbd5e1;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.93rem;
+            text-align: left;
+        }
+
+        th {
+            background: var(--header-table-gradient);
+            color: #ffffff;
+            font-weight: 700;
+            padding: 16px 18px;
+            border-bottom: 2px solid #0f172a;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.8px;
+        }
+
+        td {
+            padding: 15px 18px;
+            border-bottom: 1px solid #cbd5e1;
+            color: #1e293b;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f1f5f9;
+        }
+
+        tr:hover {
+            background-color: #e0f2fe;
+        }
+
+        /* List Kegiatan */
+        .kegiatan-list {
+            list-style: none;
+        }
+
+        .kegiatan-list li {
+            position: relative;
+            padding-left: 36px;
+            margin-bottom: 14px;
+            color: #1e293b;
+            font-weight: 500;
+        }
+
+        .kegiatan-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 1px;
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #2563eb, #0284c7);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            box-shadow: 0 3px 8px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #cbd5e1;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Banner Header -->
+        <header class="hero">
+            <span class="badge-pill">Profil Keluarga</span>
+            <h1 class="main-title">PROFIL KELUARGA YUSUPI</h1>
+            <p class="subtitle">“Tempat berbagi cerita, saling menyayangi, dan mendukung.”</p>
+            <p class="description">
+                Keluarga kami memang sederhana, tapi kami selalu berusaha untuk saling menyayangi dan membantu. Bagi kami, keluarga bukan hanya tempat tinggal, tetapi juga tempat untuk berbagi cerita dan saling mendukung.
+            </p>
+        </header>
+
+        <!-- Foto Keluarga -->
+        <section class="foto-section">
+            <div class="foto-card">
+                <img src="keluarga.jpg.jpeg" alt="Foto Keluarga Yusupi">
+            </div>
+        </section>
+
+        <!-- Data Anggota Keluarga -->
+        <section id="data-keluarga" class="section-box">
+            <h2 class="section-title">Data Anggota Keluarga</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Nama</th>
+                            <th>Hubungan Keluarga</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Tempat Tanggal Lahir</th>
+                            <th>Pekerjaan/Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Yusupi</strong></td>
+                            <td>Ayah (Kepala Keluarga)</td>
+                            <td>Laki-laki</td>
+                            <td>Kuningan, 24-03-1982</td>
+                            <td>Buruh</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>Ati</strong></td>
+                            <td>Ibu</td>
+                            <td>Perempuan</td>
+                            <td>Kuningan, 26-11-1986</td>
+                            <td>Ibu Rumah Tangga</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>M Diar Fahrurrozi</strong></td>
+                            <td>Anak Pertama (Saya)</td>
+                            <td>Laki-laki</td>
+                            <td>Kuningan, 30-12-2006</td>
+                            <td>Mahasiswa</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><strong>M Ferdinand Ardiansyah</strong></td>
+                            <td>Anak Kedua</td>
+                            <td>Laki-laki</td>
+                            <td>Kuningan, 14-04-2014</td>
+                            <td>Pelajar</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>Malika</strong></td>
+                            <td>Anak Ketiga</td>
+                            <td>Perempuan</td>
+                            <td>Kuningan, 09-12-2020</td>
+                            <td>Pelajar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Kegiatan Bersama -->
+        <section class="section-box">
+            <h2 class="section-title">Kegiatan Bersama Keluarga</h2>
+            <p style="margin-bottom: 18px; color: #475569;">Biasanya kami menghabiskan waktu bersama dengan melakukan hal-hal sederhana, seperti:</p>
+            <ul class="kegiatan-list">
+                <li>Makan bersama di rumah.</li>
+                <li>Nonton TV bareng saat santai.</li>
+                <li>Bercerita tentang kegiatan sehari-hari.</li>
+                <li>Jalan-jalan bersama saat ada waktu luang.</li>
+                <li>Saling membantu ketika mengalami kesulitan.</li>
+            </ul>
+        </section>
+
+        <!-- Momen Bersama -->
+        <section class="section-box">
+            <h2 class="section-title">Momen Bersama Keluarga</h2>
+            <p style="color: #334155;">Saya senang kalau bisa menghabiskan waktu bersama keluarga. Walaupun hanya makan atau ngobrol di rumah, hal sederhana seperti itu sudah menyenangkan bagi saya.</p>
+        </section>
+
+        <!-- Harapan Keluarga -->
+        <section class="section-box">
+            <h2 class="section-title">Harapan Keluarga</h2>
+            <p style="color: #334155;">Harapan saya, semoga keluarga kami selalu sehat dan bahagia. Saya ingin kami tetap rukun dan saling mendukung satu sama lain.</p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Hubungi kami via email: <a href="mailto:20250910022@uniku.ac.id">20250910022@uniku.ac.id</a> atau Instagram: <a href="https://instagram.com/diarfahruu" target="_blank">@diarfahruu</a></p>
+            <br>
+            <p style="color: #1e293b; font-weight: 700;">Terima Kasih</p>
+            <p>Terima kasih telah mengunjungi website profil keluarga kami.</p>
+            <p style="font-size: 0.78rem; margin-top: 10px; color: #94a3b8;">Website Profil Keluarga | Dibuat menggunakan HTML & CSS</p>
+        </footer>
+    </div>
+
+</body>
+</html>

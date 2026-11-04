@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 30px 15px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Kartu Pembungkus */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Header & Foto */
+.profile-header {
+    text-align: center;
+}
+
+.profile-img {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%; /* Menurunkan foto agar bagian atas/rambut terlihat */
+    margin-bottom: 15px;
+    border: 4px solid #4A90E2;
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.2);
+}
+
+h1 {
+    color: #1e293b;
+    font-size: 1.8rem;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+/* Informasi NIM & Kampus */
+.student-info {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #475569;
+}
+
+.student-info span {
+    background: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 15px;
+}
+
+/* Tombol CTA */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.btn {
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-primary {
+    background: #4A90E2;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #357abd;
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.btn-secondary:hover {
+    background: #cbd5e1;
+}
+
+/* Judul Section */
+h2 {
+    color: #4A90E2;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Timeline Pendidikan */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    padding-left: 15px;
+    border-left: 2px solid #e2e8f0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 15px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    background-color: #4A90E2;
+    border-radius: 50%;
+}
+
+.timeline .year {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4A90E2;
+    background: #eff6ff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.timeline h3 {
+    font-size: 0.95rem;
+    color: #1e293b;
+}
+
+.timeline .degree {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* Skills */
+.skills {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skills li {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.project-card {
+    background: #f8fafc;
+    padding: 14px;
+    border-radius: 8px;
+    border-left: 4px solid #4A90E2;
+}
+
+.project-card h3 {
+    font-size: 0.95rem;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.project-card p {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #4A90E2;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 25px;
+}
+/* Styling Seksi Hobi */
+.hobby-list {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hobby-list li {
+    background: #f1f5f9;
+    color: #334155;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.hobby-list li i {
+    color: #4A90E2;
+}
+
+.hobby-list li:hover {
+    background: #eff6ff;
+    border-color: #4A90E2;
+    transform: translateY(-2px);
+}
+
+/* Progress Bar Keahlian */
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.bar-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #334155;
+}
+
+.bar-info i {
+    color: #4A90E2;
+    margin-right: 6px;
+}
+
+.progress-bg {
+    background: #e2e8f0;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: #4A90E2;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
