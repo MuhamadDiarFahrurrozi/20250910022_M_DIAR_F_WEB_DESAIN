@@ -1,0 +1,90 @@
+/* Mengatur font global dan tata letak halaman */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Mengubah font ukuran bawaan tag <font> */
+font[size="7"] {
+    font-size: 2rem !important;
+    font-weight: 700;
+    color: #1e3a8a; /* Warna Biru */
+    display: block;
+    margin-bottom: 4px;
+}
+
+font[size="5"] {
+    font-size: 1.25rem !important;
+    font-weight: 600;
+    color: #d97706; /* Warna Oranye/Kuning */
+    display: block;
+    margin-bottom: 6px;
+}
+
+font[size="3"] {
+    font-size: 0.95rem !important;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Merapikan garis pembatas <hr> */
+hr {
+    width: 100%;
+    max-width: 750px;
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, #1e3a8a, #d97706);
+    margin: 20px 0 25px 0;
+}
+
+/* Mempercantik Tabel */
+table {
+    width: 100%;
+    max-width: 750px;
+    border-collapse: collapse !important;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    border: none !important;
+}
+
+/* Mengatur Judul Tabel (Caption) */
+caption {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1e3a8a;
+    text-align: left;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* Mengatur Header Tabel (th) */
+th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    text-align: left;
+    border: none !important;
+}
+
+/* Mengatur Isi Tabel (td) */
+td {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #e2e8f0 !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+/* Efek highlight saat kursor mengarah ke baris tabel */
+tr:hover td {
+    background-color: #f1f5f9;
+}

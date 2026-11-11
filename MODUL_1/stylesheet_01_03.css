@@ -1,0 +1,105 @@
+/* Reset & Styling Dasarnya */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #0b0f19;
+    color: #94a3b8;
+    line-height: 1.7;
+    padding: 40px 20px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Mengatur Ulang Judul HTML Dosen */
+h1, font[color="blue"], font[color="#0000FF"] {
+    display: block;
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    background: linear-gradient(90deg, #ffffff 0%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+/* Sub-Judul & Teks Kuning Kampus */
+font[color="yellow"], font[color="#FFFF00"] {
+    display: block;
+    font-size: 1.1rem !important;
+    color: #38bdf8 !important;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+/* Styling Alamat Merah */
+font[color="red"], font[color="#FF0000"] {
+    display: block;
+    font-size: 0.88rem !important;
+    color: #64748b !important;
+    margin-bottom: 20px;
+}
+
+/* Mengubah Garis HR Menjadi Garis Neon Cyan */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, #38bdf8 0%, rgba(56, 189, 248, 0) 100%);
+    margin: 25px 0 35px 0;
+}
+
+/* Styling Judul Sub-Bab (VISI, PROFIL LULUSAN, MBKM, dst) */
+b, strong {
+    display: table;
+    color: #f8fafc;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #0284c7;
+}
+
+/* Styling Paragraf Teks */
+p {
+    background: #0f172a;
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    border-radius: 10px;
+    padding: 16px 20px;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling Semua List (UL / OL) */
+ul, ol {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px 20px 20px 40px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+li {
+    margin-bottom: 8px;
+    color: #cbd5e1;
+    font-size: 0.93rem;
+    transition: color 0.2s ease;
+}
+
+li:hover {
+    color: #38bdf8;
+}
+
+li::marker {
+    color: #38bdf8;
+}

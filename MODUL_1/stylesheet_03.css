@@ -1,0 +1,52 @@
+/* Styling dasar halaman */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #0f172a; /* Background dark modern agar teks lebih menyala */
+    color: #f8fafc;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+/* Mengubah teks judul utama agar lebih 'menyala' dan berkelas */
+h1, font[size="7"], font[size="6"] {
+    font-size: 2.5rem !important;
+    font-weight: 800;
+    display: block;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    
+    /* Efek Gradasi Teks Menyala */
+   /* Efek Gradasi Teks Menyala */
+    background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+    -webkit-background-clip: text;
+    background-clip: text; /* Tambahkan baris ini */
+    -webkit-text-fill-color: transparent;
+    
+    /* Soft Glow Shadow */
+    filter: drop-shadow(0 4px 12px rgba(56, 189, 248, 0.35));
+}
+
+/* Jika ada teks penjelasan di bawahnya */
+p, font[size="3"] {
+    font-size: 1rem !important;
+    color: #94a3b8;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 500px;
+}
+
+/* Garis aksen menyala di bawah judul */
+hr {
+    width: 100px;
+    border: none;
+    height: 4px;
+    background: linear-gradient(90deg, #38bdf8, #c084fc);
+    border-radius: 4px;
+    margin: 20px auto;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+}

@@ -1,0 +1,154 @@
+/* Reset & Tampilan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #0b0f19;
+    color: #cbd5e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Mengubah Container/Form Utama */
+form, fieldset, table, div {
+    background: #0f172a;
+    border: 1px solid rgba(56, 189, 248, 0.2) !important;
+    border-radius: 14px;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.08);
+}
+
+/* Styling Tabel Form */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    box-shadow: none !important;
+    padding: 0;
+}
+
+td {
+    padding: 4px 6px;
+    vertical-align: middle;
+    font-size: 0.93rem;
+    color: #94a3b8;
+}
+
+td:first-child {
+    font-weight: 600;
+    color: #e2e8f0;
+    width: 30%;
+}
+
+/* Styling Input Text, Date, Email, & Select */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px 14px;
+    background-color: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #f8fafc;
+    font-size: 0.9rem;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+/* Efek Focus saat kolom diklik */
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #38bdf8;
+    background-color: #0f172a;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Custom Warna Datepicker Chrome/Edge */
+::-webkit-calendar-picker-indicator {
+    filter: invert(0.8);
+    cursor: pointer;
+}
+
+/* Styling Radio Button */
+input[type="radio"] {
+    accent-color: #38bdf8;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+    margin-right: 15px;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+/* Styling Tombol Simpan & Batal */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 8px;
+    margin-top: 10px;
+    border: none;
+}
+
+/* Tombol Utamanya (Simpan / Submit) */
+input[type="submit"],
+button[type="submit"],
+input[value="Simpan"] {
+    background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover,
+input[value="Simpan"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(56, 189, 248, 0.4);
+}
+
+/* Tombol Batal / Sekunder */
+input[type="reset"],
+button[type="reset"],
+input[value="Batal"] {
+    background-color: #334155;
+    color: #cbd5e1;
+}
+
+input[type="reset"]:hover,
+button[type="reset"]:hover,
+input[value="Batal"]:hover {
+    background-color: #475569;
+    color: #ffffff;
+}

@@ -1,0 +1,109 @@
+/* Tata letak utama halaman */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Mengatur ukuran dan warna font bawaan tag <font> */
+font[size="7"], font[size="6"] {
+    font-size: 1.8rem !important;
+    font-weight: 700;
+    color: #1e3a8a;
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+}
+
+font[size="5"], font[size="4"] {
+    font-size: 1.15rem !important;
+    font-weight: 600;
+    color: #d97706;
+    display: block;
+    margin-bottom: 6px;
+}
+
+font[size="3"] {
+    font-size: 0.9rem !important;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Garis pembatas elegan */
+hr {
+    width: 100%;
+    max-width: 700px;
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, #1e3a8a, #d97706, transparent);
+    margin: 18px 0 24px 0;
+    border-radius: 2px;
+}
+
+/* Merapikan dan mempercantik tabel */
+table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse !important;
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    border-radius: 10px;
+    overflow: hidden;
+    border: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efek "hidup" saat tabel di-hover */
+table:hover {
+    box-shadow: 0 14px 28px -4px rgba(0, 0, 0, 0.08);
+}
+
+/* Judul Tabel (Caption) */
+caption {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-align: left;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+}
+
+/* Header Tabel (th) */
+th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: left;
+    border: none !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* Isi Tabel (td) */
+td {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9 !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    transition: background-color 0.2s ease;
+}
+
+/* Menghilangkan garis pembatas di baris paling akhir */
+tr:last-child td {
+    border-bottom: none !important;
+}
+
+/* Efek interaktif saat baris di-hover */
+tr:hover td {
+    background-color: #f8fafc;
+    color: #1e3a8a;
+}
