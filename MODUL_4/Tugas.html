@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direktori Alumni</title>
+    <style>
+        /* Reset & Pengaturan Dasar */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+            padding: 40px 20px;
+        }
+
+        /* Header & Fitur Pencarian */
+        .header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .header h1 {
+            color: #1e293b;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .header p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 16px;
+            border: 2px solid #cbd5e1;
+            border-radius: 30px;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #searchInput:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+        }
+
+        /* Grid Daftar Alumni */
+        .alumni-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Kartu Profil Alumni & Efek Hover (Tugas No. 1) */
+        .alumni-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            /* Transisi halus untuk efek hover */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .alumni-card:hover {
+            transform: translateY(-8px); /* Kartu terangkat ke atas */
+            box-shadow: 0 12px 24px rgba(59, 130, 246, 0.15);
+            border-color: #3b82f6;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0 auto 15px auto;
+            transition: transform 0.3s ease;
+        }
+
+        .alumni-card:hover .avatar {
+            transform: scale(1.08); /* Foto/avatar sedikit membesar saat di-hover */
+        }
+
+        .alumni-name {
+            font-size: 1.25rem;
+            color: #1e293b;
+            margin-bottom: 6px;
+        }
+
+        .alumni-major {
+            display: inline-block;
+            background-color: #eff6ff;
+            color: #2563eb;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .alumni-year {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+
+        .alumni-job {
+            font-size: 0.9rem;
+            color: #475569;
+            font-style: italic;
+        }
+
+        /* Pesan jika data tidak ditemukan */
+        #noResult {
+            text-align: center;
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Direktori Alumni Kampus</h1>
+        <p>Temukan jaringan alumni berdasarkan nama atau program studi</p>
+        <!-- Input Pencarian (Tugas No. 2) -->
+        <input type="text" id="searchInput" placeholder="Cari nama alumni atau jurusan (cth: Informatika)...">
+    </div>
+
+    <div class="alumni-grid" id="alumniList">
+        <!-- Kartu 1 -->
+        <div class="alumni-card">
+            <div class="avatar">AR</div>
+            <h3 class="alumni-name">Ahmad </h3>
+            <span class="alumni-major">Teknik Informatika</span>
+            <p class="alumni-year">Angkatan 2020</p>
+            <p class="alumni-job">Frontend Developer di TechCorp</p>
+        </div>
+
+        <!-- Kartu 2 -->
+        <div class="alumni-card">
+            <div class="avatar">SN</div>
+            <h3 class="alumni-name">Siti Nur Fatimah</h3>
+            <span class="alumni-major">Sistem Informasi</span>
+            <p class="alumni-year">Angkatan 2019</p>
+            <p class="alumni-job">UI/UX Designer di Creative Studio</p>
+        </div>
+
+        <!-- Kartu 3 -->
+        <div class="alumni-card">
+            <div class="avatar">BS</div>
+            <h3 class="alumni-name">Budi Santoso</h3>
+            <span class="alumni-major">Manajemen Informatika</span>
+            <p class="alumni-year">Angkatan 2021</p>
+            <p class="alumni-job">IT Support Specialist</p>
+        </div>
+
+        <!-- Kartu 4 -->
+        <div class="alumni-card">
+            <div class="avatar">DP</div>
+            <h3 class="alumni-name">Dina Permata</h3>
+            <span class="alumni-major">Teknik Informatika</span>
+            <p class="alumni-year">Angkatan 2018</p>
+            <p class="alumni-job">Data Analyst di FinTech ID</p>
+        </div>
+
+        <!-- Kartu 5 -->
+        <div class="alumni-card">
+            <div class="avatar">RF</div>
+            <h3 class="alumni-name">Reza Fahlevi</h3>
+            <span class="alumni-major">Desain Komunikasi Visual</span>
+            <p class="alumni-year">Angkatan 2020</p>
+            <p class="alumni-job">Brand Designer</p>
+        </div>
+
+        <!-- Kartu 6 -->
+        <div class="alumni-card">
+            <div class="avatar">MA</div>
+            <h3 class="alumni-name">Recca dwi putri</h3>
+            <span class="alumni-major">Sistem Informasi</span>
+            <p class="alumni-year">Angkatan 2018</p>
+            <p class="alumni-job">System Analyst</p>
+        </div>
+    </div>
+
+    <p id="noResult">Data alumni tidak ditemukan.</p>
+
+    <!-- JavaScript untuk Fitur Filter Pencarian -->
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const alumniCards = document.querySelectorAll('.alumni-card');
+        const noResult = document.getElementById('noResult');
+
+        searchInput.addEventListener('keyup', function() {
+            const keyword = searchInput.value.toLowerCase();
+            let visibleCount = 0;
+
+            alumniCards.forEach(function(card) {
+                const name = card.querySelector('.alumni-name').textContent.toLowerCase();
+                const major = card.querySelector('.alumni-major').textContent.toLowerCase();
+
+                // Cek apakah kata kunci cocok dengan nama atau jurusan
+                if (name.includes(keyword) || major.includes(keyword)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Tampilkan pesan jika tidak ada kartu yang cocok
+            noResult.style.display = visibleCount === 0 ? 'block' : 'none';
+        });
+    </script>
+
+</body>
+</html>
